@@ -1,0 +1,81 @@
+Taller de arquitectura
+
+
+
+
+
+
+
+
+1.	Sistemas de control de versiones mas conocidos.
+
+
+
+
+-	CVS
+Concurrent Versions System o simplemente CVS, también conocido como Concurrent Versioning System, es una aplicación informática que implementa un sistema de control de versiones: mantiene el registro de todo el trabajo y los cambios en los ficheros (código fuente principalmente) que forman un proyecto (de programa) y permite que distintos desarrolladores (potencialmente situados a gran distancia) colaboren. CVS se ha hecho popular en el mundo del software libre. Sus desarrolladores difunden el sistema bajo la licencia GPL.
+
+
+
+
+-	SUBVERSION
+Subversion es un sistema de control de versiones diseñado específicamente para reemplazar al popular CVS. Es software libre bajo una licencia de tipo Apache/BSD y se le conoce también como svn por ser el nombre de la herramienta utilizada en la línea de comando.
+Una característica importante de Subversion es que, a diferencia de CVS, los demas archivos con versionamiento no tienen cada uno un número de revisión independiente, en cambio, todo el repositorio tiene un único número de versión que identifica un estado común de todos los archivos del repositorio en un instante determinado del repositoro que se esta trabajando.
+Subversion puede acceder al repositorio a través de redes, lo que le permite ser usado por personas que se encuentran en distintas computadoras. A cierto nivel, la posibilidad de que varias personas puedan modificar y administrar el mismo conjunto de datos desde sus respectivas ubicaciones fomenta la colaboración. Se puede progresar más rápidamente sin un único conducto por el cual deban pasar todas las modificaciones. Y puesto que el trabajo se encuentra bajo el control de versiones, no hay razón para temer por que la calidad del mismo vaya a verse afectada —si se ha hecho un cambio incorrecto a los datos, simplemente deshaga ese cambio.
+
+
+
+
+-	MERCURIAL
+Mercurial es un sistema de control de versiones multiplataforma, para desarrolladores de software. Está implementado principalmente haciendo uso del lenguaje de programación Python, pero incluye una implementación binaria de diff escrita en C. Mercurial fue escrito originalmente para funcionar sobre Linux. Ha sido adaptado para Windows, Mac OS X y la mayoría de otros sistemas tipo Unix. Mercurial es, sobre todo, un programa para la línea de comandos. Todas las operaciones de Mercurial se invocan como opciones dadas a su programa motor, hg (cuyo nombre hace referencia al símbolo químico del mercurio).
+Las principales metas de desarrollo de Mercurial incluyen un gran rendimiento y escalabilidad; desarrollo completamente distribuido, sin necesidad de un servidor; gestión robusta de archivos tanto de texto como binarios; y capacidades avanzadas de ramificación e integración, todo ello manteniendo sencillez conceptual. Incluye una interfaz web integrada.
+El creador y desarrollador principal de Mercurial es Matt Mackall. El código fuente se encuentra disponible bajo los términos de la licencia GNU GPL versión 2, lo que clasifica a Mercurial como software libre.
+
+
+
+
+
+
+
+
+2.	Caracteristicas de un repositorio.
+El repositorio es un almacén de contenido. Lo más frecuente es que lo encontremos alojado en internet, pero dependiendo del caso podemos hallarlo en un medio extraíble como un disco duro, o cualquier otro sitio físico donde depositar el contenido virtual, orientado a la producción almacenamiento u distribución de material digital, libros electrónicos, logotipos, imágenes, material didáctico o software. Para entender lo que es un repositorio, debemos tener claro el concepto de sistema de control de versiones (Revision Control System - RCS), este es fundamental para que un repositorio pueda cumplir con su finalidad. El sistema de control de versiones debe disponer de un repositorio que contenga el historial de versiones de todos los elementos gestionados.
+Las características fundamentales que debe cumplir el control de versiones son:
+Almacenaje de los elementos que deba gestionar, documentos de texto, imágenes, archivos digitales.
+Modificaciones de los elementos almacenados, cambios parciales o totales, como renombrar, borrar, añadir o mover elementos.
+Registro histórico de las acciones realizadas con cada elemento o en conjunto, normalmente pudiendo volver o extraer un estado anterior del producto. Este se realiza mediante un implemento en el sistema de control de versiones el cual varía según la forma de gestionarlo:
+Centralizados: repositorio centralizado de todo el código, un usuario/a (o grupo) es el responsable de la aprobación de decisiones. Es el caso del denominado Concurrent Versions System (CVS). Facilita las tareas pero reduce la flexibilidad.
+Distribuidos: Permite que cada usuario/a tenga un repositorio individual. Pudiendo intercambiar y mezclar revisiones entre ellos sin necesidad de repositorio centralizado. Los programas como Git y Mercurial son ejemplo de ello.
+Cada usuario/a puede crearse una copia local, duplicado técnicamente conocido como check out del contenido, incluso de la última versión, o cualquier versión almacenada disponible en el historial.
+Existen dos modos de operar a la hora de realizar una modificación de la copia local:
+Exclusivos: El/la usuario/a selecciona el contenido a modificar en el local y el sistema se encarga de que ningún/a otro/a usuario/a pueda modificar dicho elemento.
+Colaborativos: El/la usuario/a se descarga la copia y la modifica, posteriormente se actualiza en el repositorio los cambios realizados siendo el sistema el que se encarga de interpretar las diversas modificaciones. Requiere una buena coordinación del personal para no generar conflictos que tendrían que ser solucionados manualmente, a este proceso se le denomina check in.
+Los sistemas Wiki son similares a los repositorios, pero las limitaciones de las wikis la encontramos en el formato predefinido por la wiki en cuestión, como una versión primitiva o limitada de un auténtico sistema de control de versiones de contenido. Por otro lado, las wikis ofrece la presentación de documentos renderizados, acompañados de diversos archivos como imágenes. Otros sistemas CMS o de administración de contenido web como Drupal facilitan un control de revisiones.
+
+
+
+
+
+
+
+
+3.	Que es Git
+Git es un software de control de versiones diseñado por Linus Torvalds, pensando en la eficiencia y la confiabilidad del mantenimiento de versiones de aplicaciones cuando estas tienen un gran número de archivos de código fuente. Al principio, Git se pensó como un motor de bajo nivel sobre el cual otros pudieran escribir la interfaz de usuario o front end como Cogito o StGIT.  Sin embargo, Git se ha convertido desde entonces en un sistema de control de versiones con funcionalidad plena. Hay algunos proyectos de mucha relevancia que ya usan Git, en particular, el grupo de programación del núcleo Linux.
+El mantenimiento del software Git está actualmente (2009) supervisado por Junio Hamano, quien recibe contribuciones al código de alrededor de 280 programadores.
+
+
+
+
+
+
+
+
+4.	Historia de Git
+Git comenzó con un poco de destrucción creativa y encendida polémica. El núcleo de Linux es un proyecto de software de código abierto con un alcance bastante grande. Durante la mayor parte del mantenimiento del núcleo de Linux (1991-2002), los cambios en el software se pasaron en forma de parches y archivos. En 2002, el proyecto del núcleo de Linux empezó a usar un DVCS propietario llamado BitKeeper.
+En 2005, la relación entre la comunidad que desarrollaba el núcleo de Linux y la compañía que desarrollaba BitKeeper se vino abajo, y la herramienta dejó de ser ofrecida gratuitamente. Esto impulsó a la comunidad de desarrollo de Linux (y en particular a Linus Torvalds, el creador de Linux) a desarrollar su propia herramienta basada en algunas de las lecciones que aprendieron durante el uso de BitKeeper. Algunos de los objetivos del nuevo sistema fueron los siguientes:
+Velocidad.
+Diseño sencillo.
+Fuerte apoyo al desarrollo no lineal (miles de ramas paralelas).
+Completamente distribuido.
+Capaz de manejar grandes proyectos como el núcleo de Linux de manera eficiente (velocidad y tamaño de los datos).
+Desde su nacimiento en 2005, Git ha evolucionado y madurado para ser fácil de usar y aún así conservar estas cualidades iniciales. Es tremendamente rápido, muy eficiente con grandes proyectos, y tiene un increíble sistema de ramificación (branching) para desarrollo no lineal.
